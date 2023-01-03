@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Syne', sans-serif;
+	background-color: #212122;
+	scroll-behavior: smooth;
+	max-width: 100%;
+}
+
+section{
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+a{
+	cursor: pointer;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+.show{
+	opacity: 1;
+	animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+		padding-top: 50px;
+	}
+	100%{
+		opacity: 1;
+		padding-top: 0px;
+	}
+}
+
+.loader{
+	position: fixed;
+	top:0;
+	left:0;
+	background-color: #212122;
+	height: 100vh;
+	width: 100vw;
+	z-index: 101;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.disappear{
+	animation: vanish 1s forwards;
+}
+
+.loadText{
+	font-size: 6vw;
+	font-weight: 800;
+	color:#F8F6F1;
+	animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse{
+	0%, 100%{
+		font-size: 6vw;
+	}
+	50%{
+		font-size: 7vw;
+	}
+}
+
+@keyframes vanish{
+	100%{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+
+/*---- Grain ----*/
+.noise{
+	position:absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	z-index: 99;
+	opacity: 30%;
+	pointer-events: none;
+}
+
+.noise::after{
+	content:"";
+	position: absolute;
+	width: 200vw;
+	height: 200vh;
+	left: -50%;
+	top:-50%;
+	background-image: url("images/noise.png");
+	animation: grain 1.5s steps(6) infinite;
+}
+
+@keyframes grain{
+	0%, 100%{transform: translate(0,0);}
+	10% {transform: translate(-5%,-10%);}
+	30% {transform: translate(5%,-7%);}
+	50% {transform: translate(-4%,3%);}
+	70% {transform: translate(-9%,1%);}
+	90% {transform: translate(2%,10%);}
+}
+
+/*---- Navbar ----*/
+nav{
+	width: 100vw;
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: auto;
+	position: fixed;
+	z-index: 50;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	background-color: rgb(33,33,34,1);
+	border-bottom: solid 1px #F8F6F1;
+}
+
+@keyframes navStart{
+	0%{
+		opacity:0;
+		margin-top:-3vw;
+	}
+	80%{
+		opacity:0;
+		margin-top:-3vw;
+	}
+	100%{
+		opacity:100%;
+		margin-top:0;
+	}
+}
+
+nav a{
+	position:relative;
+	text-decoration: none;
+	color:#F8F6F1;
+	font-weight: 700;
+	font-size: 2vw;
+	cursor: pointer;
+	opacity: 80%;
+	transition: 0.3s;
+}
+
+nav a:hover{
+	opacity: 100%;
+	font-size: 2.1vw;
+}
+
+/*----- Hero -----*/
+
+.hero{
+	height: 100vh;
+	background-color: #212122;
+}
+
+.heroTitle{
+	color: #F8F6F1;
+	font-weight: 800;
+	font-size: 12vw;
+	bottom: 10px;
+	position: absolute;
+}
+
+.title1{
+	bottom: 25vw;
+
+}
+
+@keyframes hiSlide{
+	0%{
+		left: -100vw;
+		opacity: 0;
+	}
+	25%{
+		left: 10vw;
+		opacity: 100%;
+	}
+}
+
+.title2{
+	bottom: 15vw;
+	
+}
+
+@keyframes imSlide{
+	0%{
+		left: -100vw;
+		opacity: 0;
+	}
+	25%{
+		left: -100vw;
+		opacity: 0;
+	}
+	50%{
+		left: 10vw;
+		opacity: 100%;
+	}
+}
+
+.title3{
+	bottom: 2vw;
+	
+}
+
+@keyframes gilbySlide{
+	0%{
+		left: -100vw;
+		opacity: 0;
+	}
+	50%{
+		left: -100vw;
+		opacity: 0;
+	}
+	75%{
+		left: 10vw;
+		opacity: 100%;
+	}
+}
+
+.heroCopy{
+	font-size: 3.3vw;
+	color: #fff;
+	position: absolute;
+	bottom: 13vw;
+	left: 11vw;
+	
+}
+
+@keyframes copySlide{
+	0%{
+		left: -100vw;
+		opacity: 0;
+	}
+	50%{
+		left: -100vw;
+		opacity: 0;
+	}
+	75%{
+		left: 11vw;
+		opacity: 100%;
+	}
+}
+
+.heroImg{
+	position: absolute;
+	width: 60vw;
+	height: 60vw;
+	object-fit: cover;
+	right: 5vw;
+	opacity: 50%;
+	bottom: 1vw;
+}
+
+section video{
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit: cover;
+	opacity: 15%;
+}
+
+.downPointer{
+	width: 10vw;
+	height: 10vw;
+	object-fit: cover;
+	position: absolute;
+	bottom:4vw;
+	right:10vw;
+	animation: pointing infinite 2s;
+	cursor: pointer;
+}
+
+@keyframes pointing{
+	0%, 100%{
+		bottom: 3.5vw;
+	}
+	50%{
+		bottom: 5.5vw;
+	}
+}
+
+
+
+h2{
+	padding-top: 10vw;
+	font-size: 5vw;
+	color: #F8F6F1;
+	font-weight: 800;
+}
+
+.leftHang{
+	text-align: right;
+}
+
+.circleWire{
+	width: 50vw;
+	height: 50vw;
+	object-fit: cover;
+	position:absolute;
+	margin-top: 2vw;
+	opacity: 50%;
+	z-index: -1
+}
+
+.projectContainer{
+	margin-top: 5vw;
+}
+
+.projectImg{
+	width: 80vw;
+	height: 30vw;
+	object-fit: cover;
+	background-color: #222;
+}
+
+.projectTitle{
+	color: #F8F6F1;
+	font-weight: 800;
+	font-size: 4vw;
+}
+
+.projectInfo{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.projectCategory{
+	color: #F8F6F1;
+	font-weight: 500;
+	font-size: 2vw;
+}
+
+.viewButton{
+	color: #F8F6F1;
+	font-weight: 500;
+	font-size: 2vw;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.viewButton:hover{
+	font-size: 2.1vw;
+}
+
+.rightPointer{
+	width: 3vw;
+	height: 3vw;
+	object-fit: cover;
+}
+
+.experience{
+	margin-top: 100px;
+}
+
+.experienceTitle{
+	color:#F8F6F1;
+	font-weight: 700;
+	font-size: 3vw;
+	margin-top: 5vw;
+}
+
+.experienceImg{
+	width: 2vw;
+	height: 2vw;
+	object-fit: cover;
+}
+
+.experienceItem{
+	color:#F8F6F1;
+	font-size:2.5vw;
+	display:inline;
+	margin-left: 2vw;
+}
+
+/*----- SKILLS -----*/
+.skillContainer{
+	margin-top: 5vw;
+}
+
+.skillCopy{
+	text-align: right;
+	color:#F8F6F1;
+	margin-top: 1vw;
+}
+
+.skillImg{
+	width: 2vw;
+	height: 2vw;
+	object-fit: cover;
+}
+
+.skillItem{
+	display: inline;
+	font-size: 2.5vw;
+	margin-right: 2vw;
+}
+
+
+
+/*----- ABOUT -----*/
+
+.cylWire{
+	position: absolute;
+	opacity: 50%;
+	width: 50vw;
+	height: 50vw;
+	object-fit: cover;
+	right:0;
+	padding-top: 3vw;
+}
+
+.waveWire{
+	position: absolute;
+	opacity: 50%;
+	width: 40vw;
+	height: 40vw;
+	object-fit: cover;
+	left:0;
+	padding-top: 10vw;
+	padding-left: 10vw;
+}
+
+.dropWire{
+	position: absolute;
+	opacity: 50%;
+	width: 60vw;
+	height: 60vw;
+	object-fit: cover;
+	right:0;
+	padding-top: 6vw;
+}
+
+.aboutContainer{
+	display:flex;
+	justify-content: space-between;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
+}
+
+.aboutCopy{
+	color: #F8F6F1;
+	width: 35vw;
+	font-weight: 400;
+	margin-top: 50px;
+}
+
+.aboutImg{
+	width: 35vw;
+	height: 35vw;
+	object-fit: cover;
+	display:block;
+
+}
+
+.aboutTitle{
+	font-weight: 700;
+	font-size: 5vw;
+	margin-bottom: 20px;
+}
+
+.aboutDesc{
+	font-size: 2vw;
+}
+
+/* ---- FOOTER -----*/
+
+.footContainer{
+	display: flex;
+	z-index: 70;
+	align-items: center;
+	justify-content: space-between;
+	color: #F8F6F1;
+	font-size: 2vw;
+	margin-right: 10vw;
+	margin-left: 10vw;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
+	border-top: solid 2px #F8F6F1;
+	
+}
+
+.rightCol{
+	text-align: right;
+	position: absolute;
+	right: 10vw;
+}
+
+.footerItems{
+	text-decoration: none;
+	color: #F8F6F1;
+	display: block;
+	padding-top: 10px;
+	cursor:pointer;
+	transition: 0.2s;
+}
+
+.footerItems:hover{
+	font-size: 2.1vw;
+}
+
+.pHeroCopy{
+	display: flex;
+	
+	justify-content: space-between;
+	margin-top: 5vw;
+	
+}
+
+.pHeroTitle{
+	font-weight: 800;
+	color: #F8F6F1;
+	font-size: 5vw;
+	width: 50vw;
+	border-bottom: solid 2px #F8F6F1;
+}
+
+.pHeroImg{
+	width: 100%;
+	height: 30vw;
+	object-fit: cover;
+}
+
+.pHeroText{
+	color:#F8F6F1;
+	text-align:right;
+	width: 30vw;
+	font-size: 1.2vw;
+	padding-top: 5.5vw;
+}
+
+.pDesc{
+	margin-bottom: 5vw;
+	font-size: 1.5vw;
+}
+
+.pDescContainer{
+	margin-top: 5vw;
+	display:flex;
+	justify-content: space-between;
+	color: #F8F6F1;
+	font-weight: 400;
+}
+
+.descLeftColumn{
+	width:35vw;
+
+}
+
+.descRightColumn{
+	width: 35vw;
+}
+
+.pImgContainer{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2vw;
+}
+
+.pImg{
+	height: 49vw;
+	width: 49vw;
+	object-fit: cover;
+}
+
+.pVideo{
+	height: 49vw;
+	width: 49vw;
+	object-fit: cover;
+}
+
+.pViewContainer{
+	display: flex;
+	justify-content: space-around;
+}
+
+.pViewProject{
+	font-size: 5vw;
+	margin-top: 3vw;
+	color:#F8F6F1;
+	text-decoration: none;
+	transition: 0.2s;
+}
+
+.pViewProject:hover{
+	font-size: 5.5vw;
+}
+
+
+@media screen and (max-width: 480px){
+	nav a{
+		font-size: 5vw;
+	}
+
+	nav a:hover{
+		font-size: 5.5vw;
+	}
+
+	.footerItems{
+		font-size: 4vw;
+	}
+
+	.footerItems:hover{
+		font-size: 4.5vw;
+	}
+
+	.projectCategory, .viewButton{
+		font-size: 4vw;
+	}
+
+	.viewButton:hover{
+		font-size: 4.5vw;
+	}
+
+	.experienceTitle{
+		font-size: 5vw;
+	}
+
+	.experienceItem{
+		font-size: 4vw;
+	}
+
+	.skillItem{
+		font-size: 4vw;
+	}
+
+	.aboutContainer{
+		display:block;
+		justify-content: center;
+		align-items: center;
+		margin-top: 5vw;
+	}
+
+	.aboutCopy{
+		color: #F8F6F1;
+		width: 100%;
+		font-weight: 400;
+		margin-top: 10vw;
+	}
+
+	.aboutImg{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display:block;
+
+	}
+
+	.aboutTitle{
+		font-weight: 700;
+		font-size: 6vw;
+		margin-bottom: 20px;
+	}
+
+	.aboutDesc{
+		font-size: 4vw;
+	}
+
+	.pHeroText{
+		font-size: 3vw;
+		margin-top: 0.5vw;
+	}
+
+	.pDescContainer{
+		display: block;
+	}
+
+	.descLeftColumn, .descRightColumn{
+		width: 80vw;
+		font-size: 2.5vw;
+	}
+
+	.descRightColumn{
+		margin-top: 5vw;
+	}
+
+	.pImgContainer{
+		display: block;
+		margin-bottom: 2vw;
+	}
+
+	.pImg{
+		height: 100vw;
+		width: 100%;
+		object-fit: cover;
+		margin-bottom: 2vw;
+	}
+
+	.pVideo{
+		height: 100vw;
+		width: 100%;
+		margin-bottom: 2vw;
+	}
+}
+
+
+
+
+
