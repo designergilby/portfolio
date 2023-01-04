@@ -319,6 +319,17 @@ h2{
 	margin-top: 5vw;
 }
 
+.projectContainerClick{
+	text-decoration: none;
+	opacity:90%;
+	transition: 2s;
+}
+
+.projectContainerClick:hover{
+	opacity: 100%;
+}
+
+
 .projectImg{
 	width: 80vw;
 	height: 30vw;
@@ -441,14 +452,13 @@ h2{
 	height: 60vw;
 	object-fit: cover;
 	right:0;
-	padding-top: 6vw;
+	margin-top: 6vw;
 }
 
 .aboutContainer{
 	display:flex;
 	justify-content: space-between;
 	margin-top: 5vw;
-	margin-bottom: 5vw;
 }
 
 .aboutCopy{
@@ -600,13 +610,17 @@ h2{
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 600px){
 	nav a{
 		font-size: 5vw;
 	}
 
 	nav a:hover{
 		font-size: 5.5vw;
+	}
+
+	.show{
+		animation:none;
 	}
 
 	.footerItems{
