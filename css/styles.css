@@ -740,6 +740,10 @@ h2{
 		width: 100%;
 		margin-bottom: 2vw;
 	}
+
+	.mailStyle, .footerItems, .pViewProject, nav a, .projectContainerClick, .viewButton{
+		transition: none;
+	}
 }
 
 
