@@ -610,7 +610,7 @@ h2{
 }
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
 	nav a{
 		font-size: 5vw;
 	}
@@ -623,12 +623,20 @@ h2{
 		animation:none;
 	}
 
+	.hidden{
+		opacity:1;
+	}
+
 	.footerItems{
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 
 	.footerItems:hover{
-		font-size: 4.5vw;
+		font-size: 5.5vw;
+	}
+
+	.footContainer{
+		margin-bottom: 5vw;
 	}
 
 	.projectCategory, .viewButton{
