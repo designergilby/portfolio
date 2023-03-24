@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Interactive</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
+    </head>
+    <body>
+         <div class="noise"></div>
+
+         <div class="loader">
+            <h1 class="loadText">LOADING...</h1>
+        </div>
+
+        <nav>
+            <a href="index.html#heroId">HOME</a>
+            <a href="index.html#projectId">PROJECTS</a>
+            <a href="index.html#aboutId">ABOUT</a>
+        </nav>
+
+        <img src="images/drive_project.jpg" class="pHeroImg" alt="Nanoleaf Overview">
+
+        <section class="pHeroCopy hidden">
+            
+            <h1 class="pHeroTitle">NIGHT DRIVE</h1>
+            <p class="pHeroText">web design<br>spring 2022<br>student project</p>
+
+        </section>
+        <section class="pDesc">
+            <div class="pDescContainer">
+                <div class="descLeftColumn hidden">This project was completed for an Interactive Media Design class during the spring of 2022. It tasked us to combine audio and video to create an engaging interactive experience for a desktop format.  </div>
+                <div class="descRightColumn hidden">My project was centered around the concept of night driving, driving around the city and listening to the radio. It’s based on landmarks in Minneapolis, each mark on the map showing videos of the area.  </div>
+            </div>
+        </section>
+
+        <div class="pImgContainer">
+            <img src="images/drive/drive_1.jpg" class="pImg">
+            <video src="images/drive/drivevid.mp4" playsinline autoplay loop muted class="pVideo"></video>
+        </div>
+
+        <section class="pViewContainer hidden">
+            <a href="https://desweb.uwstout.edu/gilbertj5892/des371/me/" class="pViewProject">
+                view full website
+            </a>
+
+        </section>
+        
+        <footer>
+            <div class="footContainer">
+                <div class="leftCol">
+                    <a href="index.html" class="footerItems">home.</a>
+                    <a href="index.html#projectId" class="footerItems">projects.</a>
+                    <a href="index.html#aboutId" class="footerItems">about.</a>
+
+                </div>
+                <div class="rightCol">
+                    <a href="https://www.instagram.com/gilby_designs/" class="footerItems">instagram.</a>
+                    <a href="https://dribbble.com/designergilby" class="footerItems">dribbble.</a>
+                    <a href="https://www.linkedin.com/in/jack-gilbert-387860174/" class="footerItems">linkedin.</a>
+                </div>
+
+            </div>
+            
+
+        </footer>
+    	
+        
+        <script type="text/javascript" src="js/custom_behaviors.js"></script>
+    </body>
+</html>
