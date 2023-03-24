@@ -86,7 +86,7 @@ a{
 	height: 100vh;
 	overflow: hidden;
 	position: fixed;
-	z-index: 99;
+	z-index:50;
 	opacity: 30%;
 	pointer-events: none;
 }
@@ -119,7 +119,7 @@ nav{
 	justify-content: space-around;
 	margin: auto;
 	position: fixed;
-	z-index: 50;
+	z-index: 99;
 	padding-top: 0.5vw;
 	padding-bottom: 0.5vw;
 	background-color: rgb(33,33,34,1);
@@ -569,6 +569,7 @@ h2{
 .pDesc{
 	margin-bottom: 5vw;
 	font-size: 1.5vw;
+	line-height: 2vw;
 }
 
 .pDescContainer{
@@ -592,18 +593,21 @@ h2{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 2vw;
+	z-index: 99;
 }
 
 .pImg{
 	height: 49vw;
 	width: 49vw;
 	object-fit: cover;
+	z-index: 80;
 }
 
 .pVideo{
 	height: 49vw;
 	width: 49vw;
 	object-fit: cover;
+	z-index: 80;
 }
 
 .pViewContainer{
@@ -717,6 +721,7 @@ h2{
 	.descLeftColumn, .descRightColumn{
 		width: 80vw;
 		font-size: 2.5vw;
+		line-height: 3vw;
 	}
 
 	.descRightColumn{
@@ -726,6 +731,7 @@ h2{
 	.pImgContainer{
 		display: block;
 		margin-bottom: 2vw;
+		z-index: 99;
 	}
 
 	.pImg{
@@ -733,12 +739,14 @@ h2{
 		width: 100%;
 		object-fit: cover;
 		margin-bottom: 2vw;
+		z-index: 99;
 	}
 
 	.pVideo{
 		height: 100vw;
 		width: 100%;
 		margin-bottom: 2vw;
+		z-index: 99;
 	}
 
 	.mailStyle, .footerItems, .pViewProject, nav a, .projectContainerClick, .viewButton{
