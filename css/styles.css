@@ -731,7 +731,7 @@ h2{
 	.pImgContainer{
 		display: block;
 		margin-bottom: 2vw;
-		z-index: 99;
+		z-index: 70;
 	}
 
 	.pImg{
@@ -739,14 +739,18 @@ h2{
 		width: 100%;
 		object-fit: cover;
 		margin-bottom: 2vw;
-		z-index: 99;
+		z-index: 70;
 	}
 
 	.pVideo{
 		height: 100vw;
 		width: 100%;
 		margin-bottom: 2vw;
-		z-index: 99;
+		z-index: 70;
+	}
+
+	.noise{
+		z-index: 50;
 	}
 
 	.mailStyle, .footerItems, .pViewProject, nav a, .projectContainerClick, .viewButton{
