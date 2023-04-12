@@ -750,7 +750,7 @@ h2{
 	}
 
 	.noise{
-		z-index: 50;
+		display: none;
 	}
 
 	.mailStyle, .footerItems, .pViewProject, nav a, .projectContainerClick, .viewButton{
