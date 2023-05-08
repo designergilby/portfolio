@@ -86,7 +86,7 @@ a{
 	height: 100vh;
 	overflow: hidden;
 	position: fixed;
-	z-index:50;
+	z-index:30;
 	opacity: 30%;
 	pointer-events: none;
 }
@@ -580,6 +580,12 @@ h2{
 	font-weight: 400;
 }
 
+.pDescContainerAnti{
+	margin-top: 5vw;
+	color: #F8F6F1;
+	font-weight: 400;
+}
+
 .descLeftColumn{
 	width:35vw;
 
@@ -596,6 +602,12 @@ h2{
 	z-index: 99;
 }
 
+.pLargeVideoContainer{
+	width: 100%;
+	z-index: 99;
+	position:relative;
+}
+
 .pImg{
 	height: 49vw;
 	width: 49vw;
@@ -610,6 +622,11 @@ h2{
 	z-index: 80;
 }
 
+.pLargeVideo{
+	width: 100vw;
+	z-index: 99;
+}
+
 .pViewContainer{
 	display: flex;
 	justify-content: space-around;
@@ -617,7 +634,7 @@ h2{
 
 .pViewProject{
 	font-size: 5vw;
-	margin-top: 3vw;
+	margin-top: 5vw;
 	color:#F8F6F1;
 	text-decoration: none;
 	transition: 0.2s;
